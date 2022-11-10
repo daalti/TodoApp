@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+    /* Light Theme */
+    --clr--Verydarkdesaturatedblue: hsl(212, 27%, 19%);
+    --clr--VeryLightGray: hsl(0, 0%, 98%);
+    --clr--VeryLightGrayish: hsl(236, 33%, 92%);
+    --clr--LightGrayishBlue: hsl(233, 11%, 84%);
+    --clr--DarkGrayishBlue: hsl(236, 9%, 61%);
+    --clr--VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+    /* Dark Theme */
+    --clr--VeryDarkBlue: hsl(235, 21%, 11%);
+    --clr--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --clr--LightGrayishBlue: hsl(234, 39%, 85%);
+    --clr--LightGrayishBluehover: hsl(236, 33%, 92%);
+    --clr--DarkGrayishBlue: hsl(234, 11%, 52%);
+    --clr--VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+    --clr--VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
+
+    /* Fonts */
+    --ff--Josefin:'Josefin Sans', sans-serif;
+
+    --fw-regular:400;
+    --fw-bold:700;
+}
+
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after{
+    box-sizing:border-box;
+}
+/*
+    2. Remove default margin
+*/
+*{
+    margin:0;
+}
+/*
+    3. Allow percentage-based heights in the application
+*/
+html,
+body{
+    height:100%;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+*/
+body{
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+}
+/*
+    6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg{
+    display:block;
+    max-width:100%;
+}
+/*
+    7. Remove built-in form typography styles
+*/
+a,
+input,
+button,
+textarea,
+select{
+    font:inherit;
+}
+/*
+    8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    overflow-wrap:break-word;
+}
+
+h1,
+h2,
+h3{
+    line-height:1;
+}
+
+/* Start Coding */
+
+body{
+    background-color: var(--clr--VeryDarkBlue);
+}
+
+.header{
+    min-height: 30vh;
+    background-image: url("../images/bg-mobile-dark.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 3rem 1rem;
+
+    gap: clamp(10rem, 40vw, 30rem);
+}
+
+.width{
+    width: clamp(20rem, 65vw, 40rem);
+}
+
+.header .header-h1{
+    font-family: var(--ff--Josefin);
+    color: var(--clr--VeryLightGray);
+    letter-spacing: 0.4rem;
+    font-weight: var(--fw-regular);
+}
+
+.main{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1.5rem;
+
+    align-items: center;
+    margin-top: -6rem;
+
+    font-family: var(--ff--Josefin);
+    color: var(--clr--VeryLightGrayish);
+    font-weight: var(--fw-regular);
+
+}
+
+.main .input-container{
+    background-color: var(--clr--VeryDarkDesaturatedBlue);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 1rem;
+
+    border-radius: 1rem;
+}
+
+.main .input-container .new-todo{
+    background-color: transparent;
+    border: none;
+
+    margin-left: 1rem;
+}
+
+.main .item-container .item-todo{
+    background-color: var(--clr--VeryDarkDesaturatedBlue);
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+
+    border-bottom: 0.1rem solid var(--clr--VeryDarkGrayishBlue);
+}
+
+.item-circle{
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: 0.01rem solid var(--clr--VeryLightGrayish);
+    background-color: transparent;
+}
+
+.main .item-container .item-todo .item-cross{
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.main .bot-container{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    background-color: var(--clr--VeryDarkDesaturatedBlue); 
+
+}
+
+.bot-item{      
+    background-color: transparent;
+    color: var(--clr--VeryDarkGrayishBlue);
+    border: 0 solid;
+}
+
+.border-bottom{
+    border-radius: 0rem 0rem 1rem 1rem;
+    border: 0 solid var(--clr--VeryDarkDesaturatedBlue);
+    color: var(--clr--VeryDarkGrayishBlue);
+}
+
+.border-top{
+    border-radius: 1rem 1rem 0rem 0rem;
+
+}
+
+.main .item-container .item-bottom-todo{
+    background-color: var(--clr--VeryDarkDesaturatedBlue);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    padding: 1rem;
+
+
+    border-bottom: 0.1rem solid var(--clr--VeryDarkGrayishBlue);
+}
+
+.item-bottom-text-left{
+    margin-left: auto;
+    margin-right: 0;
+    background-color: transparent;
+    color: var(--clr--VeryDarkGrayishBlue);
+    border: 0 solid;
+}
+
+.footer{
+    font-family: var(--ff--Josefin);
+    color: var(--clr--VeryDarkGrayishBlue);
+    text-align: center;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.main .bot-container2{
+    display: none;
+}
+
+.item-cross, .bot-item, .item-bottom-text-left, .header-icon, .item-text, .item-circle:hover{
+    cursor: pointer;
+}
+
+.bot-item:hover, .item-bottom-text-left:hover{
+    color: var(--clr--VeryLightGray);
+}
+
+@media screen and (min-width: 50rem){
+    .header{
+        background-image: url("../images/bg-desktop-dark.jpg");
+    }
+
+    .main .bot-container2{
+        display: flex;
+        flex-flow: row nowrap;
+        align-content: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        border-radius: 1rem;
+    
+        background-color: var(--clr--VeryDarkDesaturatedBlue); 
+    
+    }
+
+    .main .item-container .item-bottom-todo{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .main .bot-container{
+        display: none;    
+    }
+    
+}
