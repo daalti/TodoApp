@@ -27,23 +27,23 @@ lightDark.addEventListener('click', function (e) {
 
     if (lightDark.src.includes("icon-moon.svg")){
         console.log(lightDark.src);
-        lightDark.src = ".../images/icon-sun.svg";
+        lightDark.src = "./images/icon-sun.svg";
 
         if (mediaQuery.matches) {
-            header.style.backgroundImage = "url('.../images/bg-desktop-dark.jpg')";
+            header.style.backgroundImage = "url('./images/bg-desktop-dark.jpg')";
         }
         else{
-            header.style.backgroundImage = "url('.../images/bg-mobile-dark.jpg')";
+            header.style.backgroundImage = "url('./images/bg-mobile-dark.jpg')";
         }
 
     }else{
         console.log(lightDark.src);
-        lightDark.src = ".../images/icon-moon.svg";
+        lightDark.src = "./images/icon-moon.svg";
         if (mediaQuery.matches) {
-            header.style.backgroundImage = "url('.../images/bg-desktop-light.jpg')";
+            header.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
         }
         else{
-            header.style.backgroundImage = "url('.../images/bg-mobile-light.jpg')";
+            header.style.backgroundImage = "url('./images/bg-mobile-light.jpg')";
         }
     }
     
