@@ -26,6 +26,7 @@ lightDark.addEventListener('click', function (e) {
     const mediaQuery = window.matchMedia('(min-width: 40rem)')
 
     if (lightDark.src.includes("icon-moon.svg")){
+        console.log(lightDark.src);
         lightDark.src = "./images/icon-sun.svg";
 
         if (mediaQuery.matches) {
@@ -36,6 +37,7 @@ lightDark.addEventListener('click', function (e) {
         }
 
     }else{
+        console.log(lightDark.src);
         lightDark.src = "./images/icon-moon.svg";
         if (mediaQuery.matches) {
             header.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
