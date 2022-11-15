@@ -154,8 +154,14 @@ body{
 .main .input-container .new-todo{
     background-color: transparent;
     border: none;
+    color: white;
+    font-weight: 400;
 
     margin-left: 1rem;
+}
+
+.main .input-container .new-todo:focus{
+    outline: none;
 }
 
 .main .item-container .item-todo{
@@ -176,6 +182,19 @@ body{
     border-radius: 50%;
     border: 0.01rem solid var(--clr--VeryLightGrayish);
     background-color: transparent;
+}
+
+.check-img{
+    background-image: url('../images/icon-check.svg'), linear-gradient(to bottom right, rgb(230, 230, 255), rgb(97, 10, 97));;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 0rem solid;
+}
+
+.grey{
+    color: var(--clr--VeryDarkGrayishBlue);
+    text-decoration: line-through;
+
 }
 
 .main .item-container .item-todo .item-cross{
@@ -246,15 +265,49 @@ body{
     display: none;
 }
 
-.item-cross, .bot-item, .item-bottom-text-left, .header-icon, .item-text, .item-circle:hover{
+.item-cross, .bot-item, .item-bottom-text-left, .header-icon, .item-circle:hover{
     cursor: pointer;
+}
+
+.item-text{
+    cursor: move;
+}
+
+.draggable.dragging{
+    opacity: .5;
 }
 
 .bot-item:hover, .item-bottom-text-left:hover{
     color: var(--clr--VeryLightGray);
 }
 
-@media screen and (min-width: 50rem){
+.active{
+    color: rgb(143, 143, 245);
+}
+
+.display-none{
+    display: none;
+}
+
+.white{
+    background-color: white;
+}
+
+.main .item-container .white{
+    background-color: white;
+    color: black;
+}
+
+.main .white{
+    background-color: white;
+    color: black;
+}
+
+.main .white:focus{
+    color: black;
+}
+
+@media screen and (min-width: 40rem){
     .header{
         background-image: url("../images/bg-desktop-dark.jpg");
     }
