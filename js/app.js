@@ -27,7 +27,7 @@ lightDark.addEventListener('click', function (e) {
 
     if (lightDark.src.includes("icon-moon.svg")){
         lightDark.src = "/images/icon-sun.svg";
-
+        console.log(lightDark.src);
         if (mediaQuery.matches) {
             header.style.backgroundImage = "url('/images/bg-desktop-dark.jpg')";
         }
@@ -36,7 +36,7 @@ lightDark.addEventListener('click', function (e) {
         }
 
     }else{
-        lightDark.src = "../images/icon-moon.svg";
+        lightDark.src = "/images/icon-moon.svg";
         if (mediaQuery.matches) {
             header.style.backgroundImage = "url('/images/bg-desktop-light.jpg')";
         }
