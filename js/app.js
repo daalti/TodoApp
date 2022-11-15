@@ -41,7 +41,7 @@ lightDark.addEventListener('click', function (e) {
             header.style.backgroundImage = "url('./images/bg-desktop-light.jpg')";
         }
         else{
-            header.style.backgroundImage = "url('../images/bg-mobile-light.jpg')";
+            header.style.backgroundImage = "url('./images/bg-mobile-light.jpg')";
         }
     }
     
