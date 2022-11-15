@@ -10,6 +10,7 @@ const lightDark = document.querySelector(".header-icon");
 const body = document.querySelector("body");
 const input = document.querySelector(".input-container");
 const botContainer2 = document.querySelector(".bot-container2");
+const botContainer1 = document.querySelector(".bot-container");
 const header = document.querySelector(".header");
 
 lightDark.addEventListener('click', function (e) {
@@ -18,9 +19,12 @@ lightDark.addEventListener('click', function (e) {
         todoItem[i].classList.toggle("white");
     }
     botContainer2.classList.toggle("white");
+    botContainer1.classList.toggle("white");
     botContainer.classList.toggle("white");
     input.classList.toggle("white");
+    newItem.classList.toggle("white");
     containerItem.style.boxShadow = "rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem";
+    botContainer1.style.boxShadow = "rgba(100, 100, 111, 0.2) 0rem 0.4375rem 1.8125rem 0rem";
     console.log(lightDark.src);
 
     const mediaQuery = window.matchMedia('(min-width: 40rem)')
@@ -186,6 +190,10 @@ newItem.addEventListener('keyup', function (event) {
     let newElement = document.createElement("div");
     newElement.classList.add("item-todo");
     newElement.classList.add("width");
+
+    if (lightDark.src.includes("icon-moon.svg")){
+        newElement.classList.add("white");
+    }
     
     let newDiv = document.createElement("div"); 
     let newButton = document.createElement("button");
@@ -209,6 +217,6 @@ newItem.addEventListener('keyup', function (event) {
 
     newElement.draggable = true;
 
-    containerItem.insertBefore(newElement, botContainer);
+    containerItem.insertBefore(newElement, botContainer[0]);
  }
 
