@@ -209,7 +209,7 @@ newItem.addEventListener('keyup', function (event) {
     newElement.insertBefore(newText, null);
 
     let newImage = document.createElement("img");
-    newImage.src = "../images/icon-cross.svg";
+    newImage.src = "./images/icon-cross.svg";
     newImage.alt = "cross";
     newImage.classList.add("item-cross");
 
